@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "X Timeline Auto Refresh",
+    "version": "1.1.0",
+    "description": "Access your feed on X (Twitter) with ease. Experience real-time updates from your searches or timeline.",
+    "homepage_url": "https://github.com/T4fid/x-timeline-auto-refresh",
+    "icons": {
+        "48": "icons/x-timeline-auto-refresh-logo-48.png",
+        "96": "icons/x-timeline-auto-refresh-logo-96.png"
+    },
+    "permissions": ["storage"],
+    "host_permissions": [
+        "*://twitter.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://twitter.com/*"],
+            "js": ["scripts/content.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "settings/options.html",
+        "default_icon": {
+            "48": "icons/x-timeline-auto-refresh-logo-48.png"
+        }
+    }
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        .x-timeline-auto-refresh .updatefrequency-field {
+            width: 80px;
+            margin: 0 10px;
+        }
+
+        .x-timeline-auto-refresh .main-fieldset {
+            margin-top: 20px;
+            padding: 20px;
+            border: none;
+        }
+
+        .x-timeline-auto-refresh .main-fieldset > legend {
+            background-color: #fff;
+            margin-left: 0;
+            font-weight: bold;
+            padding: 0 15px;
+        }
+
+        .x-timeline-auto-refresh .sub-fieldset {
+            border: 1px solid #ccc;
+        }
+
+        .x-timeline-auto-refresh .sub-fieldset > legend {
+            background-color: #fff;
+            font-weight: bold;
+            margin-left: -8px;
+            padding: 0 10px;
+        }
+
+        .x-timeline-auto-refresh .sub-fieldset .indent {
+            margin: 0px
+        }
+
+        .x-timeline-auto-refresh .sub-fieldset h3 {
+            font-size: inherit;
+            margin: 10px 0;
+        }
+
+        .x-timeline-auto-refresh .sub-fieldset select.browser-style {
+            margin-left: 60px;
+			margin-right: 60px;
+			margin-top: 10px;
+			padding: 80px;
+			border-radius: 30px;
+			style="text-align:center"
+        }
+
+        .x-timeline-auto-refresh .sub-fieldset .browser-style.disabled {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            opacity: .5;
+        }
+
+        .x-timeline-auto-refresh blockquote {
+            background-color: #e1f5fa;
+            border-radius: 3px;
+            line-height: 1.5;
+            color: #364144;
+            font-size: 12px;
+            margin: 20px 0;
+            padding: 15px;
+        }
+
+        .x-timeline-auto-refresh blockquote h4 {
+            margin: 0 0 5px;
+        }
+
+        .x-timeline-auto-refresh blockquote code {
+            background-color: rgba(255, 255, 255, .5);
+            border-radius: 3px;
+            padding: 2px 4px;
+            margin: 0 2px;
+            color: red;
+        }
+
+        .x-timeline-auto-refresh blockquote a {
+            font-weight: bold;
+            color: #364144;
+        }
+
+        .x-timeline-auto-refresh .description {
+            font-style: italic;
+            font-size: 10px;
+            margin: 3px 0;
+            color: #999;
+			padding-left: 8px;
+			padding-right: 8px;
+			text-align: justify;
+        }
+		
+		 .x-timeline-auto-refresh .sub-description {
+            font-size: 12px;
+            margin: 3px 0;
+            color: #999;
+        }
+
+        .x-timeline-auto-refresh fieldset legend + .description {
+            padding-left: 8px;
+      
+        }
+
+        .x-timeline-auto-refresh input[type="checkbox"] {
+            display: inline-block;
+        }
+
+        .x-timeline-auto-refresh .selector-field {
+            margin-bottom: 10px;
+        }
+
+        .x-timeline-auto-refresh .selector-field input {
+            margin-top: 3px;
+            width: 100%;
+        }
+
+        .x-timeline-auto-refresh .abandoned {
+            text-decoration: line-through;
+        }
+
+        .x-timeline-auto-refresh .experimental {
+            color: maroon;
+        }
+		
+		.x-timeline-auto-refresh .main-fieldset > legend,		
+        .x-timeline-auto-refresh .sub-fieldset > legend {
+            background-color: #fff; /* Couleur de fond blanche */
+			border-radius: 10px
+            margin-left: -15px;
+            font-weight: bold;
+            padding: 0 15px;
+            color: #3366FF; /* Couleur du texte bleue */
+        }
+		
+		 input {
+            font-family: Montserrat,sans-serif; /* Changer la police selon vos préférences */
+			font-size: 14px;
+			
+			
+        }
+		
+		 .x-timeline-auto-refresh #refresh-condition-focus {
+            font-family: Montserrat,sans-serif; /* Changer la police selon vos préférences */
+			font-weight: Medium ;
+			font-size: 12px;
+			padding: 15px
+        }
+		
+		.x-timeline-auto-refresh #refresh-condition-scrollbar {
+            font-family: Montserrat,sans-serif; /* Changer la police selon vos préférences */
+			font-weight: Medium ;
+			font-size: 12px;
+			padding: 15px
+        }
+		
+		.x-timeline-auto-refresh button[type="submit"] {
+    background-color: #3366FF;
+    color: white;
+    padding: 10px 80px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
+	margin-bottom: 5px
+}
+
+.x-timeline-auto-refresh button[type="submit"]:hover {
+    background-color: #1E90FF;
+}
+
+.x-timeline-auto-refresh button[type="reset"] {
+    background-color: #FF5733;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.x-timeline-auto-refresh button[type="reset"]:hover {
+    background-color: #FF4500;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+	
+    </style>
+</head>
+<body>
+    
+    <form class="x-timeline-auto-refresh">
+        <fieldset class="browser-style main-fieldset">
+            <legend class="browser-style">
+                <img src="/icons/x-timeline-auto-refresh-logo-Black.png" alt="Logo" style="vertical-align: middle; margin-right: 10px;">
+                <strong><span style="font-size:18px"><span style="font-family:Montserrat,sans-serif"><span style="vertical-align: middle;">X Timeline Auto Refresh</span></span></strong>
+            </legend>
+			
+
+            <fieldset class="browser-style sub-fieldset">
+                <legend class="browser-style" style="font-size:14px">Refresh Timeline every :</legend>
+
+                <div class="browser-style">
+                    
+					<p>
+                    <input type="number" min="5" id="setting-updatefrequency" class="updatefrequency-field">
+                    seconds
+
+                    <p class="description">
+                        X's (Twitter) requests rate limit is at 180 requests per 15 minutes. It is recommended to not go below 15 seconds.
+                    </p>
+                </div>
+
+                <br>
+
+                <div>
+    <label class="browser-style">
+        <input type="checkbox" id="setting-logoindicator">
+        Indicate status with a logo
+    </label>
+
+    <p class="description">
+        When automatic refresh is activated, the Twitter logo is replaced by another logo.
+    </p>
+
+    </p>
+	</p> 
+	
+    <center><button type="submit">Save</button><center>
+		
+	<p class="sub-description">
+	<center>After saving, refresh your page.<center>
+</div>
+				
+				
+            </fieldset>
+
+            <br>
+
+            <fieldset class="browser-style sub-fieldset">
+                <legend class="browser-style" style="font-size:14px">Auto-Refreshing</legend>
+				
+                <p class="description">
+                    These conditions determine when the refresh procedure is activated.
+                </p>
+
+                <h2>Channels</h2>
+
+                <div class="indent checkbox-grid">
+        <div>
+            <label class="browser-style">
+                <input type="checkbox" id="refresh-channel-home">
+                Home feed
+            </label>
+        </div>
+        <div>
+            <label class="browser-style">
+                <input type="checkbox" id="refresh-channel-profile">
+                User profiles <sup class="experimental"></sup>
+            </label>
+        </div>
+        <div>
+            <label class="browser-style">
+                <input type="checkbox" id="refresh-channel-search">
+                Search results <sup class="experimental"></sup>
+            </label>
+        </div>
+        <div>
+            <label class="browser-style">
+                <input type="checkbox" id="refresh-channel-list">
+                Lists <sup class="experimental"></sup>
+            </label>
+        </div>
+    </div>
+                <p>
+				<center>_____________________________________________<center>
+                <h2>Conditions</h2>
+
+                <div class="indent">
+                    <div>
+                        Enable when the page is
+						
+                        <select id="refresh-condition-focus" class="browser-style">
+                            <option value="focused">focused</option>
+                            <option value="unfocused">unfocused</option>
+                            <option value="both">focused/unfocused</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p>Enable when the scrollbar is
+                        <select id="refresh-condition-scrollbar" class="browser-style">
+                            <option value="top">at the top of the page</option>
+                            <option value="anywhere">anywhere</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="browser-style">
+                            <p><input type="checkbox" id="refresh-user-mousemovement">
+                            Disable when mouse hovers over window
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="browser-style sub-fieldset">
+                <legend class="browser-style" style="font-size:14px">Selectors</legend>
+
+                <div class="selector-field">
+                    <label class="browser-style">
+                        Feed Selector
+                    </label>
+
+                    <p class="description">
+                        The extension awaits the existance of the following element before processing anything.
+                    </p>
+
+                    <div>
+                        <input type="text" placeholder="main [data-testid=primaryColumn] section[role=region]" id="selector-feed">
+                    </div>
+                </div>
+
+                <div class="selector-field">
+                    <label class="browser-style">
+                        Refresh Selector
+                    </label>
+
+                    <p class="description">
+                        The element that the extension should click on to fetch new tweets.
+                    </p>
+
+                    <div>
+                        <input type="text" placeholder="h1[role=heading] a[role=link] > div:first-child" id="selector-refresh">
+                    </div>
+                </div>
+
+                <div class="selector-field">
+                    <label class="browser-style">
+                        Status Selector
+                    </label>
+
+                    <p class="description">
+                        The X (Twitter) logo element to replace when the extension is active.
+                    </p>
+
+                    <div>
+                        <input type="text" placeholder="h1[role=heading] [href='/home'] svg" id="selector-status">
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="browser-style sub-fieldset">
+                <legend class="browser-style">Debugging</legend>
+
+                <div>
+                    <label class="browser-style">
+                        <input type="checkbox" id="setting-debuglogs">
+                        Output console logs
+                    </label>
+                </div>
+            </fieldset>
+
+            <p>
+              
+
+            <button type="submit">Save</button>
+        </fieldset>
+    </form>
+
+    <script src="options.js"></script>
+
+</body>
+</html>
