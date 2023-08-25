@@ -4,8 +4,6 @@
 
 Elevate your X (Twitter) experience with the X Timeline Auto Refresh extension. This extension automatically loads new tweets as they appear in your X feed, making Twitter browsing seamless and effortless.
 
-<br>
-
 ## Installation 
 #### Manual installation in Chrome
 
@@ -14,7 +12,6 @@ Elevate your X (Twitter) experience with the X Timeline Auto Refresh extension. 
 - Turn on Developer mode  
 - Press "Load unpacked" and select folder with extension
 
-<br>
 
 ## Extension Features
 
@@ -32,16 +29,27 @@ With these advanced features, you have complete control over how the extension o
 
 No additional configuration is required for X Timeline Auto Refresh. Simply install the extension, and it will work seamlessly with your X (Twitter) feed.
 
+<br>
+
+<br>
+
+<br>
+
 # Usage - Creating Your TweetDeck with Vivaldi
 
-![image](/media/XTimelineAutoRefresh_a2.jpg)  
+![image](/media/XTimelineAutoRefresh_a3.jpg)
 
+<br>
 
 Experience the power of X Timeline Auto Refresh, a extension that elevates your X (Twitter) experience to new heights.
 
 With the integration of X Timeline Auto Refresh and Vivaldi Browser, you can effortlessly create your own personalized TweetDeck. Stay ahead of the curve by curating a tailored feed that combines updates from various social media platforms and websites, all in one place.
 
 Harness the synergy of X Timeline Auto Refresh and Vivaldi Browser to craft a dynamic TweetDeck that fits your unique interests and professional needs. Whether you're a social media aficionado, a news junkie, or an information-savvy individual, this extension empowers you to stay informed and engaged like never before. Say goodbye to fragmented browsing and hello to a streamlined, comprehensive information hub.
+
+<br>
+
+![image](/media/XTimelineAutoRefresh_a2.jpg)
 
 ## Creating Your Own Layout with Vivaldi
 
@@ -60,6 +68,12 @@ To further customize your X (Twitter) browsing experience and extend it across v
 Now, whenever you want to access your personalized TweetDeck, launch Vivaldi and head to the Vivaldi logo at the top-left corner. Choose "File" and then "Open Saved Session." Select the session name you assigned earlier, and your entire TweetDeck layout will materialize just as you configured it.
 
 By harnessing the capabilities of X Timeline Auto Refresh and Vivaldi Browser, you open the door to creating a cross-platform TweetDeck that aggregates updates and news from diverse sources. This tutorial empowers you to construct a versatile and efficient information hub that complements your curiosity and professional pursuits. Embrace a browsing experience tailored to you, all thanks to X Timeline Auto Refresh and Vivaldi Browser.
+
+<br>
+
+<br>
+
+<br>
 
 ## Contribution
 
