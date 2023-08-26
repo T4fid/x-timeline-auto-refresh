@@ -55,19 +55,89 @@ Harness the synergy of X Timeline Auto Refresh and Vivaldi Browser to craft a dy
 
 To further customize your X (Twitter) browsing experience and extend it across various social media platforms and websites, follow this straightforward guide to create your personalized TweetDeck using Vivaldi Browser and X Timeline Auto Refresh:
 
-1. **Download and Install Vivaldi:** Begin by visiting the Vivaldi website and downloading the browser. Once the download is complete, follow the installation instructions to set up Vivaldi on your device.
+1. **[Download and Install Vivaldi](https://vivaldi.com):** Begin by visiting the Vivaldi website and downloading the browser. Once the download is complete, follow the installation instructions to set up Vivaldi on your device.
 
-2. **Open Tabs of Interest:** Launch Vivaldi and start opening tabs that align with your interests. These tabs could encompass Twitter feeds, news websites, social media profiles, and any other content you wish to monitor.
+3. **Create Tabs:** Launch Vivaldi and start opening tabs that align with your interests. These tabs could encompass Twitter feeds, news websites, social media profiles, and any other content you wish to monitor.
 
-3. **Arrange Your Tabs:** After opening your desired tabs, it's time to organize them. Simply select all the tabs you want to include in your personalized TweetDeck. Right-click and choose the "Tile Tabs" option to align them side by side.
+4. **Arrange Your Tabs:** After opening your desired tabs, it's time to organize them. Simply select all the tabs you want to include in your personalized TweetDeck. Right-click and choose the "Tile Tabs" option to align them side by side.
 
-4. **Customize the Layout:** At the bottom-right corner of your Vivaldi browser, you'll notice an option to select your preferred layout style. Choose from vertical, horizontal, or grid formats, depending on your preference.
+5. **Customize the Layout:** At the bottom-right corner of your Vivaldi browser, you'll notice an option to select your preferred layout style. Choose from vertical, horizontal, or grid formats, depending on your preference.
 
-5. **Save Your Configuration:** Once your deck is set, click on the Vivaldi logo at the top-left corner and choose "File." From the dropdown menu, select "Save All Tabs as Session." Give your session a name that resonates with you and save it.
+6. **Save Your Configuration:** Once your deck is set, click on the Vivaldi logo at the top-left corner and choose "File." From the dropdown menu, select "Save All Tabs as Session." Give your session a name that resonates with you and save it.
 
 Now, whenever you want to access your personalized TweetDeck, launch Vivaldi and head to the Vivaldi logo at the top-left corner. Choose "File" and then "Open Saved Session." Select the session name you assigned earlier, and your entire TweetDeck layout will materialize just as you configured it.
 
 By harnessing the capabilities of X Timeline Auto Refresh and Vivaldi Browser, you open the door to creating a cross-platform TweetDeck that aggregates updates and news from diverse sources. This tutorial empowers you to construct a versatile and efficient information hub that complements your curiosity and professional pursuits. Embrace a browsing experience tailored to you, all thanks to X Timeline Auto Refresh and Vivaldi Browser.
+
+<br>
+
+## Optimizing Interface
+
+Enhancing your browsing experience is crucial to fully enjoy online platforms. In this section, we'll explore two simple yet effective methods to improve Twitter's interface according to your preferences. 
+
+Whether you want to remove the sidebar or resize image and video previews, these tips will help you customize your experience and make navigation even smoother and more enjoyable. Follow these steps to optimize Twitter's interface according to your unique preferences and needs.
+
+### Using Stylus to Optimize Interface:
+
+1. **[Install Stylus:](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)** If you don't have Stylus installed already, you can download it from the Chrome Web Store. Stylus is an extension that lets you customize the appearance of websites by adding your own CSS styles.
+
+3. Create a New Style: Once the extension is installed, click on the Stylus icon in your browser's toolbar, then select "Manage." Next, click on "Create new style" to open the style editor.
+
+4. Copy the Code: Copy and paste the code below into the style editor. This code adjusts image and video previews on Twitter to conform to a 16:9 aspect ratio.
+
+```
+div.css-1dbjc4n.r-18bvks7.r-1867qdf.r-1phboty.r-rs99b7.r-1ny4l3l.r-1udh08x.r-o7ynqc.r-6416eg {
+  aspect-ratio: 16/9 !important;
+  display: flex;
+  justify-content: center;
+  overflow: hidden; /* Pour masquer tout contenu dépassant du cadre */
+  width: 100%; /* 100% de la largeur du conteneur */
+  position: relative;
+  object-fit: contain;
+    
+}
+
+div.css-1dbjc4n.r-18bvks7.r-1867qdf.r-1phboty.r-rs99b7.r-1ny4l3l.r-1udh08x.r-o7ynqc.r-6416eg img,
+div.css-1dbjc4n.r-18bvks7.r-1867qdf.r-1phboty.r-rs99b7.r-1ny4l3l.r-1udh08x.r-o7ynqc.r-6416eg video {
+  object-fit: contain;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+```
+3. Save the Style: After copying the code, give your style a name (e.g., "Optimization 16:9 for Twitter") and click "Save."
+
+4. Apply the Style: Once the style is saved, it will automatically be applied to Twitter. Open Twitter in your browser and observe how image and video previews are now optimized for a 16:9 aspect ratio.
+
+Using Stylus allows you to customize the appearance of various elements on the websites you visit. Feel free to explore further and create custom CSS styles to enhance your online browsing experience.
+
+## Removing the Left Sidebar Menu on Twitter
+
+If you're looking to maximize your Twitter browsing experience by decluttering the interface, you can easily remove the left sidebar menu using browser extensions like "uBlock Origin" or similar ones. This tutorial will guide you through the process of installing the extension and using it to remove the sidebar, allowing you to optimize your interface.
+
+### Install uBlock Origin Extension:
+
+
+1. uBlock Origin Extension : [Download](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) and Install uBlock Origin
+
+2. Access Twitter: Open a new tab and navigate to Twitter. Make sure you're logged into your Twitter account.
+
+4. Open uBlock Origin Popup: Look for the uBlock Origin icon in your browser's toolbar (usually a red shield icon). Click on it to open the popup.
+
+5. Create a Rule Using the Picker: In the uBlock Origin popup, click on the large blue power button to activate the extension. Once activated, click on the uBlock Origin icon again to access the dashboard. Click on the "Pick an element from the page" button (usually a pipette icon) in the uBlock Origin dashboard.
+
+6. Hover Over the Sidebar: Move your cursor over the left sidebar menu on Twitter. As you hover, elements on the page will be highlighted.
+
+7. Preview and Test:When you hover over the sidebar, the specific element responsible for the sidebar will be highlighted. This ensures you're targeting the correct element. Click on the highlighted element to preview the changes. You should see the sidebar highlighted in red.
+
+8. Create and Validate Rule: After confirming the highlighted element is indeed the sidebar, click to select it. uBlock Origin will generate a rule for blocking the element. A dialog box will appear asking you to confirm the rule. Click "Create" to proceed. The rule will be added to your filters list, and the sidebar should disappear from the Twitter page.
+
+<br>
+
+If you encounter any issues or want to bring back the sidebar, you can simply deactivate uBlock Origin or remove the created rule. Remember that browser extensions may receive updates, so some aspects of the user interface might change over time.
+
 
 <br>
 
